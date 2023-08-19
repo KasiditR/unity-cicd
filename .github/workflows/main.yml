@@ -41,6 +41,11 @@ jobs:
           coverageOptions: 'generateAdditionalMetrics;generateHtmlReport;generateBadgeReport;assemblyFilters:+my.assembly.*'
 
       - uses: actions/upload-artifact@v2
+        with:
+          name: playmode-artifacts # Corrected the artifact name
+          path: ${{ matrix.testMode }}-artifacts # Use the matrix variable to specify the artifact path
+
+      - uses: actions/upload-artifact@v2
         if: always()
         with:
           name: Test results for ${{ matrix.testMode }}
