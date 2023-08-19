@@ -10,7 +10,7 @@ jobs:
       fail-fast: false
       matrix:
         projectPath:
-          - ./unity-cicd
+          - ./RogueCI-main
         testMode:
           - playmode
           - editmode
